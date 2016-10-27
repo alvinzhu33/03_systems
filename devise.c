@@ -8,7 +8,8 @@ int randInt(){
 
 	int i = 0;
 	int random = open("/dev/random", O_RDONLY);
-	read(random, &table,4);
+	int checker = read(random, &table,4);
+	//printf("%d\n", checker); OK!
 
 	return table;
 }
