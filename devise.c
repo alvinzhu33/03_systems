@@ -39,8 +39,9 @@ int main(){
 
   	printf("\nTesting if read successfully\n");
   	i=0;
+	printf("Array   | OLD | NEW \n");
   	for(i; i<10; i++){
-      		printf("Array[%d]: %d\n",i, new[i]);
+      		printf("Array[%d]: %d | %d\n",i, table[i], new[i]);
   	}
 
 	return 0;
