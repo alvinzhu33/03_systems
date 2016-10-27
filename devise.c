@@ -16,7 +16,7 @@ int randInt(){
 
 int main(){
 	int i=0;
-  int table[10];
+  	int table[10];
 
   //Populates Array w/ 10 random numbers
 	printf("Populate Array w/ 10 random numbers: \n");
@@ -29,19 +29,19 @@ int main(){
 	printf("\nWriting Numbers to file... \n");
 	int file = open("randomDEVised.txt", O_CREAT | O_WRONLY, 0666);
 	write(file, table, sizeof(table));
-  close(file);
+  	close(file);
 
   //Reading numbers to array
 	printf("Reading Numbers from file... \n");
 	int new[10];
-  file = open("randomDEVised.txt", O_RDONLY, 066);
+  	file = open("randomDEVised.txt", O_RDONLY, 066);
 	read(file, new, 40);
 
-  printf("\nTesting if read successfully\n");
-  i=0;
-  for(i; i<10; i++){
-      printf("Array[%d]: %d\n",i, new[i]);
-  }
+  	printf("\nTesting if read successfully\n");
+  	i=0;
+  	for(i; i<10; i++){
+      		printf("Array[%d]: %d\n",i, new[i]);
+  	}
 
 	return 0;
 }
